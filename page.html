@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$ANDY</title>
+    <link rel="icon" href="../images/logo.jpg" type="image/icon">
+    
+    <!-- Font Awesome for social media icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      header nav ul li :hover{
+    color:#000
+}
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background-color: #b30000;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#tranback{
+    padding-left: 54px;
+}
+header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url(../memecoin/images/imagefor.jpg);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    background-repeat: round;
+    height: 50pc;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#hero button {
+    padding: 10px 20px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Moving Text */
+.moving-text {
+    background-color: #b30000;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border:3px 3px 0px 0px #fff;
+}
+
+.moving-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #b30000;
+    z-index: 1;
+    border:3px 3px 0px 0px #fff;
+}
+
+.moving-text::after {
+    content: "$ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY $ANDY";
+    position: absolute;
+    white-space: nowrap;
+    animation: move-text 10s linear infinite;
+    z-index: 2;
+
+}
+
+@keyframes move-text {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+/* Roadmap Section */
+/* Roadmap Timeline General Styles */
+/* Roadmap Section Styling */
+/* Roadmap Section Styling */
+#roadmap {
+    background-color:transparent; /* Black background */
+    padding: 50px 20px;
+    position: relative;
+}
+
+.roadmap-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 1200px;
+}
+
+.roadmap-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.roadmap-item.left {
+    left: 0;
+}
+
+.roadmap-item.right {
+    left: 50%;
+}
+
+.roadmap-content {
+    background-color: rgb(0 0 0 / 50%);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+
+}
+
+
+
+.roadmap-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roadmap-content ul li {
+    margin-bottom: 10px;
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+}
+
+.roadmap-container::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #e60000; /* Red vertical line */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+/* Arrow styles */
+.roadmap-item.left::before,
+.roadmap-item.right::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.roadmap-item.left::before {
+    right: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+
+.roadmap-item.right::before {
+    left: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .roadmap-item {
+        width: 100%;
+        left: 0;
+    }
+    
+    .roadmap-container::before {
+        left: 5%;
+    }
+
+    .roadmap-item.right {
+        left: 0;
+    }
+
+    .roadmap-item.left::before, .roadmap-item.right::before {
+        display: none; /* Remove arrows on smaller screens */
+    }
+}
+
+/* Features Section */
+#Tokenomics {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 0;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #b30000;
+    color: white;
+    text-align: center;
+}
+
+ .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+
+    footer .social-icons a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hero h2 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    #hero button {
+        font-size: 0.9rem;
+    }
+
+    
+
+    footer p {
+        font-size: 14px;
+    }
+}
+#parallax {
+    /* The image used */
+    background-image: url("../memecoin/images/imagefor.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+  }
+  #tranback{
+    background-color: transparent;
+  }
+#about{
+    margin-top: 0;
+}
+/* Custom Card Styling */
+.card-custom {
+    background: rgba(0, 0, 0, 0.75); /* Transparent black background */
+    border: 2px solid #ff7f00; /* Orange border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 127, 0, 0.7); /* Soft orange glow */
+}
+
+/* Title Styling */
+#how-to-buy h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff; /* White color */
+}
+
+/* Icon Styling */
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+/* Text Styling */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #fff; /* White text */
+}
+
+.size{
+    width: 500px;
+    border-radius: 50%;}
+    /* Style for zoom in zoom out animation */
+.zoom-in-out-box {
+    /* Set margin around the element */
+    margin: 24px;
+    /* Set width of the element */
+    width: 450px;
+    /* Set height of the element */
+    height: 450px;
+    /* Set background color of the element */
+    background: 
+  #f500cc;
+    /* Apply animation named 'zoom-in-zoom-out' with duration of 1 second, easing effect, and infinite repetition */
+    animation: zoom-in-zoom-out 1.5s ease infinite;
+  }
+  
+  /* Keyframes for the zoom in zoom out animation */
+  @keyframes zoom-in-zoom-out {
+    /* At the beginning of the animation */
+    0% {
+      /* Scale the element to its original size */
+      transform: scale(1, 1);
+    }
+    /* At the middle of the animation */
+    50% {
+      /* Scale the element to 1.5 times its original size */
+      transform: scale(1.5, 1.5);
+    }
+    /* At the end of the animation */
+    100% {
+      /* Scale the element back to its original size */
+      transform: scale(1, 1);
+    }
+  }
+ 
+.heroh1{
+    color: #FFFFFF;
+    font-family: "Luckiest Guy", Sans-serif;
+    font-size: 78px;
+    font-weight: 600;
+}
+.heroh4{
+    color: #F87B34;
+    font-family: "Fredoka", Sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.herop{
+    color: #FFFFFF;
+    font-family: "Fredoka", Sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.heroa{
+padding: 10px 5px 10px 5px;
+border: 3px #F87B34 solid;
+border-radius: 54px;
+text-decoration: none;
+background-color: rgb(0 0 0 / 50%);
+width: 400px;
+}
+.margin-top{
+    margin-top: 30px;
+}
+.heroaa a{
+    border-radius: 30%;
+
+}
+.parallax2 {
+    /* The image used */
+    background-image: url("../memecoin/images/WhatsApp\ Image\ 2024-09-06\ at\ 00.07.42_cd300277.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+  }
+  #back{
+    background-color: rgb(0 0 0 / 50%);
+  }
+  .it{
+    border-radius: 50%;
+  }
+  .margin-side{
+    margin-left: 30px;
+  }
+  .more{
+    margin-left: 60px;
+  }
+  .buy {
+    color: #FFFFFF;
+    font-family: "Fredoka One", Sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 0.4px;
+  }
+  /* Footer Heading (Contact Section) */
+.footer-heading {
+    color: #FF7300; /* Orange color */
+    font-size: 60px; /* Larger than before */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Social Media Text */
+.social-media-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Email Text */
+.email {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Social Icons */
+.social-link img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Footer Disclaimer */
+.footer-disclaimer {
+    font-size: 12px;
+    color: #7F7F7F;
+    line-height: 1.5;
+}
+
+/* Rights Reserved Text */
+.rights-reserved {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 5px;
+}
+.right{
+    margin-left: 100px;
+}
+.left{
+    margin-left: -100px;
+}
+#specialbigbuy{
+    border-radius: 54px;
+    border: #FFFFFF 3px solid;
+    text-decoration: none;
+    background-color: #000;
+    color: #FFFFFF;
+    font-family: "Luckiest Guy", Sans-serif;
+    font-size: 33px;
+    font-weight: 300;
+    margin-left: 200px;
+}
+#specialbigbuy:hover{
+    background-color: #ff7f00;
+}
+#padd{
+    font-family: "Luckiest Guy", Sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 30px 15px 0px 15px;
+}
+#padd:hover{
+    color:#ff7f00;
+    background-color: transparent;
+}
+
+#hov:hover{
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+         
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+        
+        .topnav .icon {
+          display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
+        .navbar-brand {
+        height: 114px;}
+        </style>
+</head>
+<body>
+    <header style="background-color: rgb(0 0 0 / 50%) !important;">
+        <div class="navbar-header " id="padd1" >
+            <img class="navbar-brand" style="border-radius: 50%; width: 100%;" src="../memecoin/images/logo.jpg">
+          </div>
+        <div class="topnav" id="myTopnav" style="background-color: transparent;">
+            <a href="#hero"  id="padd" >Home</a>
+            <a href="#about"  id="padd" >About</a>
+            <a href="#roadmap" id="padd" >Roadmap</a>
+            <a href="#Tokenomics" id="padd" >Tokenomics</a>
+            <a href="#how-to-buy" id="padd" >How to buy</a>
+            <a href="#contact" id="padd" >Contact</a>
+            <a href="https://raydium.io/swap/?inputMint=sol&outputMint=9rDVimT9NKAtdE7iHCuu67cfL27Dr1VnXjWz4KcCB13f" id="specialbigbuy">Buy Now</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>   
+          <script>
+          function myFunction2() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+          </script>
+          
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <h1 class="heroh1">ANDY</h1>
+                <h4 class="heroh4">"PROTECT AND SERVE"</h4>
+                <p class="herop" style="font-size: 2.2rem;">ANDY ($ANDY) which embodies a global,<br> decentralised crypto community- driven mindset.<br> Protect and serve.</p>
+                <input type="text" value="9rDVimT9NKAtdE7iHCuu67cfL27Dr1VnXjWz4KcCB13f" id="myInput hov" class="text-white heroa">
+<button onclick="myFunction()">Copy token</button>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+                
+                <div class="social-icons margin-top heroaa" >
+                    <!-- Social media links: Instagram, Telegram, and Twitter -->
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+              <div class="col-md-5">
+               <img src="../memecoin/images/logo.jpg" class="size zoom-in-out-box">
+              </div>
+            </div>
+    </section>
+    <div class="moving-text">MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON</div>
+<section id="parallax">
+    <section id="about">
+          <div class="card  border-0"  id="tranback">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../memecoin/images/WhatsApp Image 2024-09-06 at 00.07.42_cd300277.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-6 border-0 pl-8" >
+                <div class="card-body text-dark fs-4 fw-bolder" id="tranback">
+                  <h5 class="card-title heroh1">About</h5>
+                  <p class="card-text herop align-middle text-dark fs-1 fw-bolder mb-5 pl-5" >In the depths of the Metaverse, Andy the frog was no ordinary amphibian. Born from forgotten memes and blockchain magic, Andy discovered an ancient coin imbued with the spirit of fun and fortune. This coin became $ANDY, the memecoin of chaos, joy, and unpredictable riches.</p>
+                   <p class="herop text-dark fs-1 fw-bolder pl-5">
+                    Andy now hops from wallet to wallet, blessing holders with the Luck of the Frog. Those who embrace $ANDY join the "Frog Squad," spreading memes and laughter across the crypto realm. With Andy leading the way, the wild ride of the meme economy has only just begun.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Insert your moving text (MOON) that fills the entire width of the screen -->
+
+    <section id="roadmap">
+        <h1 class="heroh1">Roadmap</h1>
+        <div class="roadmap-container">
+            <!-- Story Item 1 -->
+            <div class="roadmap-item right">
+                <div class="roadmap-content">
+                    <h3 class="heroh4">Stage 1</h3>
+                    <ul class="herop">
+                        <li><s>Website creation</s></li>
+                        <li><s>Token Creation</s></li>
+                        <li><s>Twitter Launch</s></li>
+                        <li><s>Telegram Launch</s></li>
+                        <li><s>Onboard Key Advisors</s></li>
+                        <li><s>Lock LP</s></li>
+                        <li><s>Add LP Pool</s></li>
+                        <li><s>Organic Community Build</s></li>
+                        <li><s>DEX Socials Update</s></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Story Item 2 -->
+            <div class="roadmap-item left">
+                <div class="roadmap-content">
+                    <h3 class="heroh4">Stage 2</h3>
+                    <ul class="herop">
+                        <li>Activate Marketing Campaign</li>
+                        <li>Onboard Key KOLs</li>
+                        <li>Open VC</li>
+                        <li>Callers</li>
+                        <li>Spaces</li>
+                        <li>Trending</li>
+                        <li>Community Raids</li>
+                        <li>Meme Competitions</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Story Item 3 -->
+            <div class="roadmap-item right">
+                <div class="roadmap-content">
+                    <h3 class="heroh4">Stage 3</h3>
+                    <ul class="herop">
+                        <li>AMA Campaign</li>
+                        <li>Community Spaces</li>
+                        <li>Coin Gecko Listing</li>
+                        <li>CoinMarketCap Listing</li>
+                        <li>Ads</li>
+                        <li>DexTools Trending</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Story Item 4 -->
+            <div class="roadmap-item left">
+                <div class="roadmap-content">
+                    <h3 class="heroh4">Stage 4</h3>
+                    <ul class="herop">
+                        <li>Bigger Partnerships</li>
+                        <li>CEX Listings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+</section>
+    <div class="moving-text">MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON</div>
+<section class="parallax2">
+    <section id="Tokenomics">
+        <h2 class="heroh1">Tokenomics</h2>
+        <input type="text" value="9rDVimT9NKAtdE7iHCuu67cfL27Dr1VnXjWz4KcCB13f" id="myInput" class="text-white heroa">
+<button onclick="myFunction()" style="border:none;background-color:  #b30000; padding: 20px 20px 20px 20px;">Copy token</button>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+        <div class="card-group">
+            <div class="card border-0" id="tranback">
+              <div class="card-body text-white fs-4 fw-bolder" id="tranback">
+                <h5 class="card-title" style="font-size: 5.5rem;color: #ff7f00;">819 M</h5>
+                <p class="card-text" style="font-size: 2rem;">Total Token Supply</p>
+              </div>
+            </div>
+            <div class="card border-0"id="tranback">
+            
+              <div class="card-body text-white fs-4 fw-bolder" id="tranback">
+                <h5 class="card-title" style="font-size: 5.5rem;color: #ff7f00;">0/0</h5>
+                <p class="card-text" style="font-size: 2rem;">Tax</p>
+              </div>
+              
+            </div>
+            <div class="card border-0 " id="tranback">
+             
+              <div class="card-body text-white fs-4 fw-bolder" id="tranback">
+                <h5 class="card-title" style="font-size: 5.5rem;color: #ff7f00;">Ownership</h5>
+                <p class="card-text" style="font-size: 2rem;">Reonounced</p>
+              </div>
+              
+            </div>
+            <div class="card border-0" id="tranback">
+                <div class="card-body text-white fs-4 fw-bolder" id="tranback">
+                  <h5 class="card-title" style="font-size: 5.5rem;color: #ff7f00;">100% LP</h5>
+                  <p class="card-text" style="font-size: 2rem;">Burned</p>
+                </div>
+               
+              </div>
+          </div>
+    </section>
+    <section id="how-to-buy" class="container my-5"></section>
+        <h2 class="text-center text-white mb-5 heroh1">HOW TO BUY</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 mb-4 left">
+                <div class="card card-custom" id="back">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="../memecoin/images/Untitled-design-2023-03-30T212906_738.png" alt="Make a Wallet" class="icon mr-4">
+                        <div   class="margin-side">
+                            <h3 class="card-title text-white" style="color: #FFFFFF;
+                            font-weight: 700; line-height: 1.7;text-transform: uppercase;">MAKE A WALLET</h3>
+                            <p class="card-text text-white buy">Get started by downloading Phantom or your preferred wallet from the app store or Google Play for free. For desktop users, install the Phantom extension from the Chrome Web Store.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4 right">
+                <div class="card card-custom" id="back">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="../memecoin/images/solana.png" alt="Buy Some SOL" class="icon mr-4">
+                        <div class="margin-side">
+                            <h3 class="card-title text-white" style="color: #FFFFFF;
+                            font-weight: 700; line-height: 1.7;text-transform: uppercase;">BUY SOME SOL</h3>
+                            <p class="card-text text-white buy">Ensure you have SOL in your wallet to exchange for $SAMI. If you don't have any, you can purchase SOL directly within the Phantom app, transfer from another wallet, or buy it on a different exchange and send it to your wallet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4 left">
+                <div class="card card-custom"  id="back">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="../memecoin/images/raidium.png" alt="Go to Raydium" class="icon mr-4">
+                        <div class="margin-side">
+                            <h3 class="card-title text-white" style="color: #FFFFFF;
+                            font-weight: 700; line-height: 1.7;text-transform: uppercase;">GO TO RAYDIUM</h3>
+                            <p class="card-text text-white buy">Access Raydium. Open Raydium in your Chrome browser or within the Phantom app browser. Connect your wallet. Enter the $SAMI token address in Raydium, select $SAMI, and confirm. When Phantom asks for a wallet signature, approve it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4 right">
+                <div class="card card-custom" id="back">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="../memecoin/images/logo.jpg" alt="Swap SOL for $SAMI" class="icon mr-4 it">
+                        <div  class="margin-side more">
+                            <h3 class="card-title text-white" style="color: #FFFFFF;
+                            font-weight: 700; line-height: 1.7;text-transform: uppercase;">SWAP SOL FOR $ANDY</h3>
+                            <p class="card-text text-white buy">Trade SOL for $ANDY. With zero taxes, you don't need to worry about setting a specific slippage for the transaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+    <div class="moving-text">MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON MOON</div>
+    <footer class="footer bg-dark text-white" id="contact">
+        <div class="container text-center py-5">
+            <!-- Contact Section -->
+            <h1 class="display-3 footer-heading">$ANDY</h1>
+            <p class="social-media-text">FOLLOW US ON SOCIAL MEDIA</p>
+            <div class="d-flex justify-content-center mb-3 social-icons">
+                <!-- Social Icons (using provided icons) -->
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="email">contact@$ANDY.com</p>
+        </div>
+    
+        <!-- Footer Section -->
+        
+    </footer>
+    <div class="container-fluid bg-black text-center py-3" style="background-color: #000 !important; width: 100%;">
+        <p class="rights-reserved ">2024 $ANDY. All right reserved.</p>
+        <p class="footer-disclaimer">
+            $ANDY is a digital asset classified as a memecoin. It is created as a parody and does not possess any intrinsic utility or value. The Token is for entertainment and speculative purposes only and should not be considered as an investment, currency, or anything of value.
+        </p>
+    </div>
+
+
+    <!-- Red stars background (commented where to insert background images in CSS) -->
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+
+    <!-- Production (minified) -->
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="../memecoin/script.js"></script>
+    <script src="../memecoin/script.js"></script>
+    <script>
+        function copyURI(evt) {
+    evt.preventDefault();
+    navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
+      /* clipboard successfully set */
+    }, () => {
+      /* clipboard write failed */
+    });
+}
+    </script>
+</body>
+
+</html>
